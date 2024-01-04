@@ -33,8 +33,9 @@ module.exports = {
         'custom-blue': '#0B162A',
         'custom-dark': '#010308',
       },
-      background: {
-        'backgroundMenu': 'rgba(255, 255, 255, 0.04)'
+      backgroundColor: {
+        'backgroundMenu': 'rgba(255, 255, 255, 0.04)',
+        'backgroundQuote': 'rgba(8, 108, 128, 0.10)',
       },
     },
   },

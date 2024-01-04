@@ -5,7 +5,7 @@
         </h2>
         <img src="/img/Subtract.png" alt="Subtract">
     </div>
-    <div class="flex content-between px-20">
+    <div class="flex justify-between px-20 ">
         <div class="max-w-[900px] flex flex-col">
             @@include("components/escort-subtitle/index.html")
             @@include("components/legal-support/index.html")
@@ -17,8 +17,10 @@
             @@include("components/escort-cards/index.html")
             @@include("components/escort-documents-cards/index.html")
         </div>
-        <div class="">
-
+        <div class="flex flex-col gap-[15px] pt-20">
+            @@include("../../components/cusir-code-telegram/index.html")
+            <!--нужно изменить название классов для компонента quote-->
+            @@include("../../components/quote/quote.html")
         </div>
     </div>
     <div class="flex flex-col px-20 pb-20">
