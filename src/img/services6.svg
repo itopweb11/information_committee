@@ -1,0 +1,5 @@
+<svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.15" d="M101 51C101 78.6142 78.6142 101 51 101M101 51C101 23.3858 78.6142 1 51 1M101 51H51M51 101C23.3858 101 1 78.6142 1 51C1 23.3858 23.3858 1 51 1M51 101V51M51 1V51" stroke="#086C80" stroke-width="1.5" stroke-linejoin="round"/>
+<path opacity="0.5" d="M101 51C101 23.3858 78.6142 1 51 1V51H101Z" stroke="#086C80" stroke-width="1.5" stroke-linejoin="round"/>
+<path d="M51 101C78.6142 101 101 78.6142 101 51H51V101Z" stroke="#086C80" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>

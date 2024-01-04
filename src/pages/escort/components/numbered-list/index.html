@@ -1,0 +1,32 @@
+<style>
+    .numbered-list ol{
+        counter-reset: myCounter;
+    }
+
+    .numbered-list li:before {
+        counter-increment: myCounter;
+        content: counter(myCounter);
+        background: rgb(8, 108,128, 1);
+        margin: 0 13px 0 -42px;
+        color: white;
+        padding: 3px 8px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 170%;
+    }
+</style>
+
+<div class="numbered-list">
+    <ol class="flex flex-col gap-[10px]">
+        <li class="leading-[170%] ml-[45px] tracking-[.2px]">
+            Восстановить платежеспособность компании, либо физического лица, способствовать полному возврату долгов.
+            В таком случае банкрот так и не становится банкротом, а возвращается в ряды платежеспособных субъектов
+        </li>
+        <li class="leading-[170%] ml-[45px] tracking-[.2px]">
+            Распродать имущество должника, чтобы хотя бы частично погасить имеющиеся долги.
+            В этом случае юридическое лицо ликвидируется, а физическое получает временное поражение в
+            правах (трех- пятилетний запрет на занятие определенными видами деятельности и обязанность
+            сообщать контрагентам всех своих сделок о своем банкротстве).
+        </li>
+    </ol>
+</div>
