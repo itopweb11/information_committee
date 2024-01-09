@@ -5,10 +5,10 @@
         <div class="min-h-[1px] my-10 bg-[#FFFFFF]/[.20]"></div>
         <p class="text-white font-medium leading-[170%]">Иногда в массе данных нет никакого смысла, <br> а иногда единственный факт бесценен</p>
         <div class=" flex justify-between mt-5">
-            <div class="flex pl-2  pr-[22px] h-51px items-center gap-[15px] rounded-[40px] border-[1px] border-[#FFFFFF]/[.20]">
-                <img src="/img/Ellipse.png" alt="Ellipse">
-                <p class="text-white font-semibold text-[15px]">Н.Н. Талеб</p>
-            </div>
+            <!--в компоненте home-banner у <div> нужно удалить стиль bg-[#F8F8F8]
+                для <p> нужно добавить стиль text-white
+            -->
+            @@include("../../../components/person-card/index.html")
             <button><img src="/img/Subtract.png" alt="Subtract"></button>
         </div>
     </div>

@@ -1,5 +1,22 @@
 <main class="w-screen">
-    @@include("./home-banner/home-banner.html")
-    @@include("./home-articles/home-articles.html")
-    @@include("./home-specialization/home-specialization.html")
+    @@include("./home-banner/index.html")
+    <div class="px-20 mt-20">
+        @@include("home-article/index.html")
+        @@include("../../components/quote/index.html")
+        @@include("home-advantage/index.html")
+    </div>
+    <div class="px-20 pt-20 bg-[#F8F8F8] mt-20">
+        <h2 class="leading-[140%] text-[30px]">На чем мы специализируемся? </h2>
+        <div class="specialization__blocks flex flex-wrap gap-[20px] mt-[60px]">
+            <!--в компонентах нужно заменить изображение и текст-->
+            @@include("../../components/information-card/index.html")
+            @@include("../../components/information-card/index.html")
+            @@include("../../components/information-card/index.html")
+            @@include("../../components/information-card/index.html")
+            @@include("../../components/information-card/index.html")
+            @@include("../../components/additional-information/index.html")
+        </div>
+        @@include("home-error-block/index.html")
+        @@include("home-goodQuality/index.html")
+    </div>
 </main>

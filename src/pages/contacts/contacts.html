@@ -1,36 +1,28 @@
-<div class="px-20 pt-[120px] pb-20">
+<div class="px-20 pt-[120px] pb-10">
     @@include("../../components/navigation/navigation.html")
-    <div>
-        <div>
-            <p>Адрес:</p>
-            <p>ММДЦ “Москва-Сити” Башня Федерация, <br> Москва Пресненская наб. д. 12, офис 85</p>
+    <div class="bg-[url('/img/contacts-banner.jpg')] flex justify-between p-[45px] pb-[92px] mt-10 mb-[60px]">
+        <div class="flex flex-col gap-2.5">
+            <p class="text-white text-[25px] leading-[145%]">Адрес:</p>
+            <a class="text-white text-[25px] leading-[145%]"
+               href="https://www.google.com/maps/search/55.7501782017501, 37.53812159079294">
+                ММДЦ “Москва-Сити” Башня Федерация,<br> Москва Пресненская наб. д. 12, офис 85
+            </a>
         </div>
-        <div>
-            <div>
-                <p>Тел.:</p>
-                <p>+7 495 088-33-33</p>
+        <div class="flex flex-col gap-[25px] w-[350px]">
+            <div class="flex flex-col gap-[5px]">
+                <p class="text-white text-[25px] leading-[145%]">Тел:</p>
+                <a class="text-white text-[25px] leading-[145%]" href="tel:+74950883333">+7 495 088-33-33</a>
             </div>
-            <div>
-                <p>Факс:</p>
-                <p>+7 495 532-53-64</p>
+            <div class="flex flex-col gap-[5px]">
+                <p class="text-white text-[25px] leading-[145%]">Факс:</p>
+                <a class="text-white text-[25px] leading-[145%]" href="tel:+74955325364">+7 495 532-53-64</a>
             </div>
-            <div></div>
-            <div>
-                <p>Эл. почта:</p>
-                <p>Эл. почта:</p>
+            <div class="w-full h-px bg-[#E6E6E6] mt-[5px]"></div>
+            <div class="flex flex-col gap-[5px]">
+                <p class="text-white text-[25px] leading-[145%]">Эл. почта:</p>
+                <a href="mailto:info@ki112.ru" class="text-white text-[25px] leading-[145%]">info@ki112.ru</a>
             </div>
         </div>
     </div>
-    <div>
-        <div>
-            <div>
-                <p>Наш телеграм канал</p>
-                <p>Наведите камеру телефона на QR код, чтобы перейти в наш телеграм</p>
-            </div>
-            <div>
-                @@include("../../components/button-social/button-social.html")
-            </div>
-        </div>
-        <img src="/img/curarCode.png" alt="curarCode">
-    </div>
+    @@include("../../components/cusir-code-telegram/index.html")
 </div>
