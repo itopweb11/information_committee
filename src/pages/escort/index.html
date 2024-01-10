@@ -5,26 +5,105 @@
         </h2>
         <img src="/img/Subtract.png" alt="Subtract">
     </div>
-    <div class="flex justify-between px-20 ">
+    <div class="flex justify-between px-20 relative">
         <div class="max-w-[900px] flex flex-col">
             @@include("../../components/subtitle/index.html")
-            @@include("components/legal-support/index.html")
-            @@include("components/the-selected-text/index.html")
+            <div class="flex flex-col gap-5">
+                @@include("components/escort-text/index.html")
+                @@include("components/escort-text/index.html")
+                @@include("components/escort-text/index.html")
+                @@include("components/escort-text/index.html")
+            </div>
+
+            @@include("../../components/subtitle/index.html")
+            <div class="flex flex-col gap-5">
+                @@include("components/escort-text/index.html")
+                @@include("components/escort-text/index.html")
+            </div>
+            @@include("components/escort-the-selected-text/index.html")
+            <div class="mt-[30px]">
+                @@include("components/escort-text/index.html")
+            </div>
+
             @@include("../../components/additional-information/index.html")
-            @@include("components/numbered-list/index.html")
-            @@include("components/escort-banner/index.html")
+
+            @@include("../../components/subtitle/index.html")
+            <div class="flex flex-col mb-5">
+                @@include("components/escort-text/index.html")
+            </div>
+            @@include("components/escort-numbered-list/index.html")
+            <div class="mt-[30px]">
+                @@include("components/escort-text/index.html")
+            </div>
+            @@include("components/escort-the-selected-text/index.html")
+            <div class="flex flex-col gap-5 mb-5 mt-[30px]">
+                @@include("components/escort-text/index.html")
+                @@include("components/escort-text/index.html")
+                @@include("components/escort-text/index.html")
+            </div>
+            @@include("components/escort-numbered-list/index.html")
+            <div class="mt-[30px]">
+                @@include("components/escort-text/index.html")
+            </div>
+
+            <img class="mt-[60px]" src="/img/Escort-banner.jpg" alt="Escort-banner">
+
+            @@include("../../components/subtitle/index.html")
+            <div class="mb-5">
+                @@include("components/escort-text/index.html")
+            </div>
+            @@include("components/escort-numbered-list/index.html")
+            <div class="mb-5 mt-[30px]">
+                @@include("components/escort-text/index.html")
+            </div>
+            @@include("components/escort-numbered-list/index.html")
+            @@include("components/escort-the-selected-text/index.html")
+
+            @@include("../../components/subtitle/index.html")
+            <div class="mb-5">
+                @@include("components/escort-text/index.html")
+            </div>
             @@include("components/escort-bulleted-list/index.html")
-            @@include("components/escort-cards/index.html")
+            @@include("components/escort-the-selected-text/index.html")
+
+            @@include("../../components/subtitle/index.html")
+            @@include("components/escort-person-cards/index.html")
+
+            @@include("../../components/subtitle/index.html")
             @@include("components/escort-documents-cards/index.html")
         </div>
-        <div class="flex flex-col gap-[15px] pt-20">
+        <div class="escort__sidebar flex flex-col gap-[15px] pt-20">
             @@include("../../components/cusir-code-telegram/index.html")
             <!--нужно изменить название классов для компонента quote-->
             @@include("../../components/quote/index.html")
         </div>
     </div>
+
     <div class="flex flex-col px-20 pb-20">
         @@include("../../components/subtitle/index.html")
         @@include("components/escort-other-services-cards/index.html")
     </div>
 </div>
+
+<script>
+    let sidebar = document.querySelector(".escort__sidebar");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 450 && window.scrollY <= 6400) {
+            sidebar.style.position = 'fixed';
+            sidebar.style.top = '-65px';
+            sidebar.style.right = '80px';
+            sidebar.style.bottom = '';
+        } else if (window.scrollY > 6400) {
+            sidebar.style.position = 'absolute';
+            sidebar.style.right = '80px';
+            sidebar.style.bottom = '0';
+            sidebar.style.top = '';
+        } else {
+            sidebar.style.position = '';
+            sidebar.style.top = '';
+            sidebar.style.right = '';
+            sidebar.style.bottom = '';
+        }
+    });
+</script>

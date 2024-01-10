@@ -1,4 +1,30 @@
-<div class="py-[10px] px-[15px] inline-block border border-[#E6E6E6]">
-    <a class="text-[15px] leading-[150%]" href="#">Все</a>
+
+<div class="my-[30px] flex gap-[10px]">
+    <a class="navigation__elem py-[10px] px-[15px] inline-block border border-[#E6E6E6] text-[15px] leading-[150%] tracking-[.06px]" href="#">Все</a>
+    <a class="navigation__elem py-[10px] px-[15px] inline-block border border-[#E6E6E6] text-[15px] leading-[150%] tracking-[.06px]" href="#">Финансы</a>
+    <a class="navigation__elem py-[10px] px-[15px] inline-block border border-[#E6E6E6] text-[15px] leading-[150%] tracking-[.06px]" href="#">Банкротство</a>
+    <a class="navigation__elem py-[10px] px-[15px] inline-block border border-[#E6E6E6] text-[15px] leading-[150%] tracking-[.06px]" href="#">Долги</a>
+    <a class="navigation__elem py-[10px] px-[15px] inline-block border border-[#E6E6E6] text-[15px] leading-[150%] tracking-[.06px]" href="#">Уголовные дела</a>
 </div>
 
+<script>
+    window.onload = function() {
+        let navigationElements = document.querySelectorAll(".navigation__elem");
+        let navigationFirstElement = navigationElements[0];
+
+        navigationFirstElement.style.background = "#097990";
+        navigationFirstElement.style.color = "white";
+
+        navigationElements.forEach((element) => {
+            element.addEventListener("click", (event) => {
+                navigationElements.forEach((el) => {
+                    el.style.background = "";
+                    el.style.color = "";
+                });
+
+                event.target.style.background = "#097990";
+                event.target.style.color = "white";
+            });
+        });
+    };
+</script>

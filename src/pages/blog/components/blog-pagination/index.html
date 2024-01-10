@@ -1,9 +1,30 @@
 <div class="flex gap-5 h-[51px">
-    <!--Для активного элемента добовляем класс bg-[#F2F2F2]-->
-    <a href="#" class="w-[50px] hover:border border rounded-full bg-[#F2F2F2] text-center py-[13px]">1</a>
-    <a href="#" class="w-[50px] hover:border rounded-full text-center py-[13px]">2</a>
-    <a href="#" class="w-[50px] hover:border rounded-full text-center py-[13px]">3</a>
-    <a href="#" class="w-[50px] hover:border rounded-full text-center py-[13px]">4</a>
+    <a href="#" class="pagination__elem w-[50px] hover:border rounded-full text-center py-[13px]">1</a>
+    <a href="#" class="pagination__elem w-[50px] hover:border rounded-full text-center py-[13px]">2</a>
+    <a href="#" class="pagination__elem w-[50px] hover:border rounded-full text-center py-[13px]">3</a>
+    <a href="#" class="pagination__elem w-[50px] hover:border rounded-full text-center py-[13px]">4</a>
     <p class="py-[13px] w-[50px] text-center">...</p>
-    <a href="#" class="w-[50px] hover:border rounded-full  text-center py-[13px] leading-[150%]">85</a>
+    <a href="#" class="pagination__elem w-[50px] hover:border rounded-full  text-center py-[13px] leading-[150%]">85</a>
 </div>
+
+<script>
+    window.onload = function() {
+        let paginationElements = document.querySelectorAll(".pagination__elem");
+        let paginationFirstElement = paginationElements[0];
+
+        paginationFirstElement.style.background = "#F2F2F2";
+        paginationFirstElement.style.border = "1px solid #F2F2F2";
+
+        paginationElements.forEach((element) => {
+            element.addEventListener("click", (event) => {
+                paginationElements.forEach((el) => {
+                    el.style.background = "";
+                    el.style.border = "";
+                });
+
+                event.target.style.background = "#F2F2F2";
+                event.target.style.border = "1px solid #F2F2F2";
+            });
+        });
+    };
+</script>
