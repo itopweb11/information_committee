@@ -1,13 +1,13 @@
 <main class="w-screen">
     @@include("./home-banner/index.html")
-    <div class="px-20 mt-20 max-xl: mt-10">
+    <div class="px-20 mt-20 max-xl:mt-10 max-lg:px-4">
         @@include("home-article/index.html")
         @@include("../../components/quote/index.html")
         @@include("home-advantage/index.html")
     </div>
-    <div class="p-20 bg-[#F8F8F8]">
-        <h2 class="leading-[140%] text-[30px]">На чем мы специализируемся? </h2>
-        <div class="specialization__blocks flex flex-wrap gap-[20px] mt-[60px]">
+    <div class="p-20 bg-[#F8F8F8] mt-20 max-lg:px-4 max-md:py-10 px-4 max-md:mt-10">
+        <h2 class="leading-[140%] text-[30px] max-sm:text-[24px]">На чем мы специализируемся? </h2>
+        <div class="flex flex-wrap gap-[20px] mt-[60px] max-sm:mt-[30px] max-sm:gap-[15px]">
             <!--в компонентах нужно заменить изображение и текст-->
             @@include("../../components/information-card/index.html")
             @@include("../../components/information-card/index.html")

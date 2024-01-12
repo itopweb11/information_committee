@@ -1,21 +1,3 @@
-<!-- home -->
-
-<div class="p-[45px] bg-[#F2F2F2] flex flex-col items-start gap-[56px] max-w-[630px] max-[1440px]:max-w-[100%] max-[1440px]:gap-10 max-[1440px]:p-[25px]">
-    <img src="/img/Frame1.svg" alt="Frame1">
-    <div class="flex flex-col items-start gap-[30px] max-[1440px]:gap-[15px]">
-        <h3 class="text-[25px] leading-[140%] tracking-[0.3px]">Комплексная защита <br> должников от кредиторов</h3>
-        <p class="text-content leading-[170%] max-sm:line-clamp-6 overflow-hidden text-ellipsis	">
-            Нестабильные условия рынка и жесткая санкционная политика недружественных
-            государств нередко провоцируют ситуации, при которых исполнение кредитных
-            обязательств субъектом предпринимательства становится затруднительным.
-            Своевременное обращение на ранней стадии к команде наших экспертов позволит
-            не только полностью исключить риски наступления негативных последствий для
-            должников, но и выйти победителями в противостоянии с кредиторами.
-        </p>
-       <!-- <p class="hide-text md:hidden">Читать полностью</p>-->
-    </div>
-</div>
-
 <!--
     about-us
     <div class="p-[45px] bg-[#F2F2F2] flex flex-col items-start gap-[56px] max-w-[630px]">
@@ -27,31 +9,63 @@
 </div>
 -->
 
-<!--
+<!-- home -->
+<div class="p-[45px] bg-[#F2F2F2] flex flex-col items-start gap-[56px] w-[630px] max-[1439px]:w-full max-[1439px]:gap-10 max-sm:p-[25px]">
+    <img class="max-sm:w-[70px] h-[70px]" src="/img/Frame1.svg" alt="Frame1">
+    <div class="card__content flex flex-col items-start gap-[30px] max-[1439px]:gap-[15px]">
+        <h3 class="text-[25px] leading-[140%] tracking-[0.3px] max-sm:text-[18px] max-sm:leading-[150%]">Комплексная защита <br> должников от кредиторов</h3>
+        <p class="text-content leading-[170%] max-[450px]:line-clamp-6  max-sm:text-[15px] max-sm:leading-[160%]">
+            Нестабильные условия рынка и жесткая санкционная политика недружественных
+            государств нередко провоцируют ситуации, при которых исполнение кредитных
+            обязательств субъектом предпринимательства становится затруднительным.
+            Своевременное обращение на ранней стадии к команде наших экспертов позволит
+            не только полностью исключить риски наступления негативных последствий для
+            должников, но и выйти победителями в противостоянии с кредиторами.
+        </p>
+        <p class="hide-text text-[15px] leading-[170%] text-[#097990] min-[450px]:hidden">Читать полностью</p>
+    </div>
+</div>
+
+
+
 <script>
     window.addEventListener('DOMContentLoaded', function () {
-        let textContainer = document.querySelector('.text-content');
-        let hideButton = document.querySelector('.hide-text');
+        let containers = document.querySelectorAll('.card__content');
 
-        // Получаем высоту текстового контейнера и высоту одной строки текста
-        let containerHeight = textContainer.clientHeight;
-        let lineHeight = parseInt(window.getComputedStyle(textContainer).lineHeight);
+        let screenWidth = window.innerWidth;
 
-        // Получаем количество строк текста
-        let lineCount = containerHeight / lineHeight;
-        console.log(lineCount, 'lineCount')
+        containers.forEach(container => {
+            let textContainer = container.querySelector('.text-content');
+            let toggleButton = container.querySelector('.hide-text');
 
-        // Если строк больше 6, показываем кнопку "Читать полностью"
-        /*if (lineCount > 6) {
-            hideButton.style.display = 'block';
-        }*/
+            //  состояние текста как свёрнутое
+            let isExpanded = false;
+            textContainer.style.minHeight = '144px'; // Меняем minHeight на minHeight для корректной анимации
+            textContainer.style.transition = 'min-height 500ms'; // Добавляем анимацию
 
-        // При клике на кнопку, показываем весь текст
-        hideButton.addEventListener('click', function () {
-            textContainer.style.overflow = 'visible';
-            hideButton.style.display = 'none';
+            toggleButton.textContent = 'Читать полностью';
+
+            toggleButton.addEventListener('click', function () {
+                if (isExpanded) {
+                    // Сворачиваем текст
+                    textContainer.style.minHeight = '144px';
+                    toggleButton.textContent = 'Читать полностью';
+                    textContainer.classList.add('max-md:line-clamp-6'); // Добовляем класс для троеточия
+                    toggleButton.setAttribute('aria-expanded', 'false');
+
+                } else {
+                    // Разворачиваем текст
+                    textContainer.style.minHeight = '280px'; // Анимируем изменение minHeight вместо minHeight
+                    toggleButton.textContent = 'Скрыть';
+                    setTimeout(() => {
+                        textContainer.classList.remove('max-md:line-clamp-6'); // Удаляем класс для троеточия
+                    }, 500);
+                    toggleButton.setAttribute('aria-expanded', 'true');
+
+                }
+                isExpanded = !isExpanded;
+            });
         });
     });
 </script>
--->
 

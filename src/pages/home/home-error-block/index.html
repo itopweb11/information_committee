@@ -1,15 +1,15 @@
-<div class="aside bg-[#0B162A] mt-20 p-[45px] relative max-lg:px-[25px] pt-[20px] pb-[25px]">
+<div class="aside bg-[#0B162A] mt-20 p-[45px] relative max-sm:px-[25px] pt-[20px] pb-[25px] max-sm:mt-10">
     <div class="flex flex-col lg:gap-[60px] max-lg:gap-10">
-        <div class="flex flex-col gap-5">
-            <h2 class="text-white text-[30px] leading-[145%] tracking-[0.2px] max-lg:text-[20px]">
+        <div class="flex flex-col gap-5 max-sm:gap-[15px]">
+            <h2 class="text-white text-[30px] leading-[145%] tracking-[0.2px] max-lg:text-[20px] max-lg:leading-[135%]">
                 ТОП-5 критических ошибок, из-за которых <br> предпринимателей привлекают к уголовной <br> ответственности
             </h2>
-            <p class="text-white leading-[170%] opacity-60">
+            <p class="text-white leading-[170%] opacity-60 max-sm:leading-[150%] text-[14px]">
                 Подпишись на наш Telegram-кaнaл и получи практический чек-лист, <br>
                 как избежать уголовной ответственности, сохранить свои активы, деньги и свободу!
             </p>
         </div>
-        <div class="max-w-[242px]">
+        <div class="w-[242px] max-sm:w-[293px]">
             <!--
             В компоненте button-social нужно заменить текст и иконку
             текст: Получить в Telegram
@@ -18,6 +18,7 @@
             @@include("../../../components/button-social/index.html")
         </div>
     </div>
-    <img class="absolute right-0 top-0 opacity-20" src="/img/Vector2.svg" alt="Vector2">
-    <img class="absolute right-0 bottom-0 opacity-20" src="/img/Vector1.svg" alt="Vector1">
+    <img class="absolute right-0 top-0 opacity-20 max-lg:hidden" src="/img/Vector2.svg" alt="Vector2">
+    <img class="absolute right-0 bottom-0 opacity-20 max-lg:hidden" src="/img/Vector1.svg" alt="Vector1">
+    <img class="absolute right-0 bottom-0 opacity-20 lg:hidden" src="/img/Vector4.svg" alt="Vector4">
 </div>
