@@ -1,10 +1,10 @@
 <!-- home -->
 
-<div class="p-[45px] bg-[#F2F2F2] flex flex-col items-start gap-[56px] max-w-[630px]">
+<div class="p-[45px] bg-[#F2F2F2] flex flex-col items-start gap-[56px] max-w-[630px] max-[1440px]:max-w-[100%] max-[1440px]:gap-10 max-[1440px]:p-[25px]">
     <img src="/img/Frame1.svg" alt="Frame1">
-    <div class="flex flex-col items-start gap-[30px]">
+    <div class="flex flex-col items-start gap-[30px] max-[1440px]:gap-[15px]">
         <h3 class="text-[25px] leading-[140%] tracking-[0.3px]">Комплексная защита <br> должников от кредиторов</h3>
-        <p class="leading-[170%]">
+        <p class="text-content leading-[170%] max-sm:line-clamp-6 overflow-hidden text-ellipsis	">
             Нестабильные условия рынка и жесткая санкционная политика недружественных
             государств нередко провоцируют ситуации, при которых исполнение кредитных
             обязательств субъектом предпринимательства становится затруднительным.
@@ -12,6 +12,7 @@
             не только полностью исключить риски наступления негативных последствий для
             должников, но и выйти победителями в противостоянии с кредиторами.
         </p>
+       <!-- <p class="hide-text md:hidden">Читать полностью</p>-->
     </div>
 </div>
 
@@ -26,5 +27,31 @@
 </div>
 -->
 
+<!--
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        let textContainer = document.querySelector('.text-content');
+        let hideButton = document.querySelector('.hide-text');
 
+        // Получаем высоту текстового контейнера и высоту одной строки текста
+        let containerHeight = textContainer.clientHeight;
+        let lineHeight = parseInt(window.getComputedStyle(textContainer).lineHeight);
+
+        // Получаем количество строк текста
+        let lineCount = containerHeight / lineHeight;
+        console.log(lineCount, 'lineCount')
+
+        // Если строк больше 6, показываем кнопку "Читать полностью"
+        /*if (lineCount > 6) {
+            hideButton.style.display = 'block';
+        }*/
+
+        // При клике на кнопку, показываем весь текст
+        hideButton.addEventListener('click', function () {
+            textContainer.style.overflow = 'visible';
+            hideButton.style.display = 'none';
+        });
+    });
+</script>
+-->
 
