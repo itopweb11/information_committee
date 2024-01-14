@@ -1,14 +1,28 @@
-<div class="flex flex-col">
+<style>
+    .article__slider::-webkit-scrollbar {
+        display: none;
+    }
+
+    .slider__navigation {
+        border-color: #097990;
+    }
+    .slider__navigation  div{
+        background: #097990;
+    }
+
+</style>
+
+<div class="flex flex-col max-xl:p-20 max-md:px-4 max-md:pt-10 max-md:pb-[35px]">
     @@include("components/article-content-desc/index.html")
     @@include("../../../../components/quote/index.html")
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-10 max-md:gap-[25px]">
         @@include("components/article-content-subtitle/index.html")
         @@include("components/article-content-desc/index.html")
         @@include("components/article-content-img/index.html")
         @@include("components/article-content-desc/index.html")
     </div>
     @@include("../../../../components/quote/index.html")
-    <div class="flex flex-col gap-10 mb-20">
+    <div class="flex flex-col gap-10 mb-20 max-md:gap-[30px]">
         @@include("components/article-content-subtitle/index.html")
         <div class="flex flex-col gap-5">
             @@include("components/article-content-desc/index.html")
@@ -16,18 +30,65 @@
             @@include("components/article-content-desc/index.html")
         </div>
     </div>
-    <div class="flex flex-col gap-10">
+    <div class="flex flex-col gap-10 max-md:gap-0">
         @@include("components/article-content-subtitle/index.html")
-        <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-5 max-md:mt-[30px]">
             @@include("components/article-content-desc/index.html")
             @@include("components/article-content-desc/index.html")
             @@include("components/article-content-desc/index.html")
         </div>
-        <div class="flex flex-wrap gap-y-10	gap-x-5">
+        <div class="article__slider flex flex-wrap gap-y-10	gap-x-5 max-xl:justify-center  max-md:mt-[25px] max-sm:flex-nowrap overflow-x-auto max-sm:justify-start max-sm:gap-x-[10px] mr-[-16px]">
             @@include("components/article-content-img/index.html")
             @@include("components/article-content-img/index.html")
             @@include("components/article-content-img/index.html")
+        </div>
+        <div class="sm:hidden mt-[15px] mb-10 w-full flex justify-center gap-[5px]">
+            <div class="slider__navigation1 flex justify-center items-center w-[14px] h-[14px] rounded-full border-[1px] p-[2px] border-[#CCC]">
+                <div class="w-[6px] h-[6px] rounded-full "></div>
+            </div>
+            <div class="slider__navigation2 flex justify-center items-center w-[14px] h-[14px] rounded-full border-[1px] p-[2px] border-[#CCC]">
+                <div class="w-[6px] h-[6px] rounded-full "></div>
+            </div>
+            <div class="slider__navigation3 flex justify-center items-center w-[14px] h-[14px] rounded-full border-[1px] p-[2px] border-[#CCC]">
+                <div class="w-[6px] h-[6px] rounded-full "></div>
+            </div>
+        </div>
+        <div class="xl:hidden flex justify-center">
+            @@include("../article-social-links/index.html")
         </div>
     </div>
     @@include("components/article-content-navigation/index.html")
 </div>
+
+<script>
+    let divElement = document.querySelector('.article__slider');
+    let sliderNavigation1 = document.querySelector('.slider__navigation1');
+    let sliderNavigation2 = document.querySelector('.slider__navigation2');
+    let sliderNavigation3 = document.querySelector('.slider__navigation3');
+
+    sliderNavigation1.classList.add('slider__navigation')
+    divElement.addEventListener('scroll', function() {
+        let scrollWidth = divElement.scrollWidth;
+        let scrollLength = divElement.scrollLeft;
+        let clientWidth = divElement.clientWidth;
+        let scrolledPercentage = (scrollLength / (scrollWidth - clientWidth)) * 100;
+
+        console.log(scrolledPercentage, 'scrolledPercentage')
+        divElement.style.marginRight = '-16px';
+
+        if (scrolledPercentage < 10) {
+            sliderNavigation1.classList.add('slider__navigation')
+            sliderNavigation2.classList.remove('slider__navigation')
+            sliderNavigation3.classList.remove('slider__navigation')
+        } else if (scrolledPercentage > 32 && scrolledPercentage < 85) {
+            sliderNavigation2.classList.add('slider__navigation')
+            sliderNavigation1.classList.remove('slider__navigation')
+            sliderNavigation3.classList.remove('slider__navigation')
+        } else if (scrolledPercentage > 85) {
+            sliderNavigation1.classList.remove('slider__navigation')
+            sliderNavigation2.classList.remove('slider__navigation')
+            sliderNavigation3.classList.add('slider__navigation')
+            divElement.style.marginRight = '0px';
+        }
+    });
+</script>

@@ -1,33 +1,29 @@
-<div class="relative flex flex-col gap-[25px] bg-[#097990] w-[300px] px-[25px] pt-5 pb-[25px]">
+<!--<div class="relative flex flex-col gap-[25px] bg-[#097990] w-[300px] px-[25px] pt-5 pb-[25px]">
     <div class="flex flex-col gap-[5px]">
         <h2 class="text-[20px] leading-[150%] text-white">Наш телеграм канал</h2>
         <p class="text-[15px] leading-[140%] text-[#CFF4FC] tracking-[.2px]">Наведите камеру телефона на QR код, чтобы перейти в наш телеграм</p>
     </div>
     <img class="absolute top-0 right-0" src="/img/Vector3.svg" alt="Vector3">
     <img class="w-[150px] h-[150px]" src="/img/cusir-code-telegram.svg" alt="cusir-code-telegram">
-    <!--в компоненте button-social нужно заменить класс gap-[23px] на gap: 75px;-->
+    &lt;!&ndash;в компоненте button-social нужно заменить класс gap-[23px] на gap: 75px;&ndash;&gt;
     @@include("../button-social/index.html")
-</div>
+</div>-->
 
 
-<!--
-    contacts
-
-<div class="flex justify-between bg-[#F8F8F8] w-full p-10">
+<!--contacts-->
+<div class="flex justify-between bg-[#F8F8F8] w-full p-10 max-lg:pt-5 max-lg:px-[25px] max-lg:pb-[25px]">
     <div class="flex flex-col gap-[40px]">
-        <div class="flex flex-col gap-[10px]">
-            <h2 class="text-[25px] leading-[145%]">Наш телеграм канал</h2>
-            <p class="leading-[170%]">
+        <div class="flex flex-col gap-[10px] max-md:gap-[15px]">
+            <h2 class="text-[25px] leading-[145%] max-md:text-[22px] max-md:leading-[145%]">Наш телеграм канал</h2>
+            <p class="leading-[170%] max-md:text-[15px] max-md:leading-[150%]">
                 Наведите камеру телефона на QR код, чтобы перейти в наш телеграм
             </p>
         </div>
-        <div class="w-[198.3px]">
-            &lt;!&ndash; нужно добавить класс bg-black в место bg-white bg-opacity-[0.16]&ndash;&gt;
+        <div class="w-[198.3px] max-md:w-full bg-black rounded-full">
             @@include("../button-social/index.html")
         </div>
     </div>
-    <div class="p-[7px] bg-white">
+    <div class="p-[7px] bg-white max-md:hidden">
         <img class="w-[150px] h-[150px]" src="/img/cusir-code-telegram.svg" alt="cusir-code-telegram">
     </div>
 </div>
--->

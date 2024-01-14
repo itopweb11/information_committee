@@ -1,20 +1,26 @@
-<div class="px-20 pt-[120px]">
+<style>
+    .blog__card div:last-child div:last-child {
+        border-bottom: none;
+    }
+</style>
+
+<div class="px-20 pt-[120px] max-xl:px-4 max-xl:pt-[53px] pb-10">
     @@include("../../components/navigation/navigation.html")
     @@include("components/blog-navigation/index.html")
-    <div class="flex flex-wrap mb-10 mt-[70px] gap-10">
+    <div class="blog__card flex flex-wrap mb-10 mt-[70px] gap-10 max-xl:mt-10 max-[1439px]:justify-between max-sm:gap-5 max-sm:mb-[21px]">
         @@include("components/blog-card/index.html")
         @@include("components/blog-card/index.html")
         @@include("components/blog-card/index.html")
-        <div class="w-screen h-px bg-[#E6E6E6] mt-[29px]"></div>
+        <div class="w-screen h-px bg-[#E6E6E6] mt-[29px] max-[1439px]:hidden"></div>
         @@include("components/blog-card/index.html")
         @@include("components/blog-card/index.html")
         @@include("components/blog-card/index.html")
-        <div class="w-screen h-px bg-[#E6E6E6] mt-[29px]"></div>
+        <div class="w-screen h-px bg-[#E6E6E6] mt-[29px] max-[1439px]:hidden"></div>
         @@include("components/blog-card/index.html")
         @@include("components/blog-card/index.html")
         @@include("components/blog-card/index.html")
     </div>
-    <div class="my-20 flex justify-center">
+    <div class="my-20 flex justify-center max-sm:my-0">
         @@include("components/blog-pagination/index.html")
     </div>
 </div>

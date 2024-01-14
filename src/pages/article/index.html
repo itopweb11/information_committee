@@ -1,36 +1,42 @@
 <div>
     @@include("components/article-banner/index.html")
-    <div class="article__content flex pl-[320px] pr-[80px] py-20 gap-[190px] relative">
+    <div class="xl:hidden">@@include("components/article-content/index.html")</div>
+    <div class="article__content flex pl-[320px] pr-[80px] py-20 gap-[190px] relative max-xl:hidden">
         @@include("components/article-content/index.html")
         @@include("components/article-social-links/index.html")
     </div>
 </div>
 
 <script>
-    let socialMedia = document.querySelector(".social__media");
-    let articleContent = document.querySelector(".article__content");
-    window.addEventListener("scroll", () => {
+    let screenWidth = window.innerWidth;
 
-        if (window.scrollY > 700 && window.scrollY <= 5350) {
-            socialMedia.style.position = 'fixed';
-            socialMedia.style.top = '190px';
-            socialMedia.style.right = '80px';
+    if (screenWidth > 1200) {
+        let socialMedia = document.querySelector(".social__media");
+        let articleContent = document.querySelector(".article__content");
+        window.addEventListener("scroll", () => {
 
-            articleContent.style.paddingRight = '320px';
-            articleContent.style.paddingLeft = '320px';
-            articleContent.style.gap = '';
-        } else if (window.scrollY > 5350) {
-            socialMedia.style.position = 'absolute';
-            socialMedia.style.right = '80px';
-            socialMedia.style.bottom = '80px';
-            socialMedia.style.top = '';
-        } else {
-            socialMedia.style.position = '';
-            socialMedia.style.top = '';
-            socialMedia.style.right = '';
-            articleContent.style.paddingRight = '';
-            articleContent.style.paddingLeft = '';
-            articleContent.style.gap = '';
-        }
-    });
+            if (window.scrollY > 700 && window.scrollY <= 5350) {
+                socialMedia.style.position = 'fixed';
+                socialMedia.style.top = '190px';
+                socialMedia.style.right = '80px';
+
+                articleContent.style.paddingRight = '320px';
+                articleContent.style.paddingLeft = '320px';
+                articleContent.style.gap = '';
+            } else if (window.scrollY > 5350) {
+                socialMedia.style.position = 'absolute';
+                socialMedia.style.right = '80px';
+                socialMedia.style.bottom = '80px';
+                socialMedia.style.top = '';
+            } else {
+                socialMedia.style.position = '';
+                socialMedia.style.top = '';
+                socialMedia.style.right = '';
+                articleContent.style.paddingRight = '';
+                articleContent.style.paddingLeft = '';
+                articleContent.style.gap = '';
+            }
+        });
+    }
+
 </script>

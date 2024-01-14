@@ -1,26 +1,27 @@
-<div class="px-20 pt-[120px] pb-10">
+<div class="px-20 pt-[120px] pb-10 max-xl:px-4 max-md:pt-[53px]">
     @@include("../../components/navigation/navigation.html")
-    <div class="bg-[url('/img/contacts-banner.jpg')] flex justify-between p-[45px] pb-[92px] mt-10 mb-[60px]">
-        <div class="flex flex-col gap-2.5">
-            <p class="text-white text-[25px] leading-[145%]">Адрес:</p>
-            <a class="text-white text-[25px] leading-[145%]"
+    <div class="bg-[url('/img/contacts-banner.jpg')] flex justify-between p-[45px] pb-[92px] mt-10 mb-[60px] max-lg:p-[25px] gap-x-5 max-[880px]:flex-col max-md:mb-[38px] max-md:bg-[url('/img/contacts-banner-adaptive.jpg')] bg-cover">
+        <div class="flex flex-col gap-2.5 max-md:gap-[5px]">
+            <p class="text-white text-[25px] leading-[145%] max-md:text-[15px] opacity-60">Адрес:</p>
+            <a class="text-white text-[25px] leading-[145%] max-md:text-[18px]"
                href="https://www.google.com/maps/search/55.7501782017501, 37.53812159079294">
-                ММДЦ “Москва-Сити” Башня Федерация,<br> Москва Пресненская наб. д. 12, офис 85
+                ММДЦ “Москва-Сити” Башня <br class="lg:hidden"> Федерация,<br class="max-lg:hidden"> Москва Пресненская наб. д. 12, офис 85
             </a>
         </div>
-        <div class="flex flex-col gap-[25px] w-[350px]">
+        <div class="w-full h-px bg-[#E6E6E6] mb-[25px] mt-[24px] min-[880px]:hidden"></div>
+        <div class="flex flex-col gap-[25px] w-[350px] max-md:w-full max-md:gap-0">
             <div class="flex flex-col gap-[5px]">
-                <p class="text-white text-[25px] leading-[145%]">Тел:</p>
-                <a class="text-white text-[25px] leading-[145%]" href="tel:+74950883333">+7 495 088-33-33</a>
+                <p class="text-white text-[25px] leading-[145%] max-md:text-[15px] opacity-60">Тел:</p>
+                <a class="text-white text-[25px] leading-[145%] max-md:text-[18px]" href="tel:+74950883333">+7 495 088-33-33</a>
             </div>
-            <div class="flex flex-col gap-[5px]">
-                <p class="text-white text-[25px] leading-[145%]">Факс:</p>
-                <a class="text-white text-[25px] leading-[145%]" href="tel:+74955325364">+7 495 532-53-64</a>
+            <div class="flex flex-col gap-[5px] max-md:mt-[15px]">
+                <p class="text-white text-[25px] leading-[145%] max-md:text-[15px] opacity-60">Факс:</p>
+                <a class="text-white text-[25px] leading-[145%] max-md:text-[18px]" href="tel:+74955325364">+7 495 532-53-64</a>
             </div>
-            <div class="w-full h-px bg-[#E6E6E6] mt-[5px]"></div>
+            <div class="w-full h-px bg-[#E6E6E6] my-[5px] max-md:my-[25px]"></div>
             <div class="flex flex-col gap-[5px]">
-                <p class="text-white text-[25px] leading-[145%]">Эл. почта:</p>
-                <a href="mailto:info@ki112.ru" class="text-white text-[25px] leading-[145%]">info@ki112.ru</a>
+                <p class="text-white text-[25px] leading-[145%] max-md:text-[15px] opacity-60">Эл. почта:</p>
+                <a href="mailto:info@ki112.ru" class="text-white text-[25px] leading-[145%] max-md:text-[18px]">info@ki112.ru</a>
             </div>
         </div>
     </div>

@@ -38,6 +38,10 @@ module.exports = {
         'backgroundQuote': 'rgba(8, 108, 128, 0.10)',
       },
     },
+    backdropFilter: {
+      'none': 'none',
+      'blur': 'blur(7.5px)',
+    },
   },
   plugins: plugins,
 };
